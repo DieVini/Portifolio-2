@@ -1,0 +1,152 @@
+
+*{
+margin: 0;
+padding: 0;
+}
+:root{
+    /*paleta de cores para o site*/
+    --cor-primaria: #2E236C;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #0000ff;
+    /*fontes utilizadas no site*/
+    --font-primaria: "Krona one", sans-serif;
+    --font-secundaria: "Montserrat", sans-serif;
+}
+body{
+    background-color: var(--cor-primaria);
+    /* height: 100vh; */
+    box-sizing: border-box;
+    color: var(--cor-secundaria); 
+}
+.apresentacao{ /*tag main*/
+    padding: 5% 15%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao_imagem{
+    width: 50%;
+}
+
+.apresentacao_conteudo{ /*tag section*/
+    display:flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+.apresentacao_links{ /*tag div*/
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column; /*vertical*/
+    align-items: center;
+    gap: 32px;
+}
+.cabecalho{ /*tag header*/
+    padding: 2% 0% 0% 15%;
+}
+
+.header_links{ /*tag nav*/
+    display: flex;  /* por ter mais de uma caixa*/
+    gap: 80px; /*espaçamento entre as caixas*/
+    /*flex-direction: row; reduntante pois já é o padrão*/    
+}
+
+.header_links_links{ /*tag a para botoes do cabecalho*/
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    font-family: var(--font-secundaria);
+    text-decoration: none;
+    font-size: 1.5rem;
+    gap: 16px;
+}
+
+.header_links_links:hover{ /*adicionar efeito hover nos botoes do cabecalho*/
+    color: var(--cor-hover);
+    cursor: pointer;
+}
+
+.destaque_titulo{ /*strong titulo*/
+    color: var(--cor-terciaria);
+}
+p{ /*paragrafo*/
+    text-align: justify;
+    color: var(--cor-secundaria);
+}
+.apresentacao_conteudo_titulo{ /*tag H1*/
+    font-size: 2.25rem;
+    font-family: var(--font-primaria);
+    font-weight: 100;
+}
+.apresentacao_conteudo_texto{ /*tag p*/
+    font-size: 1.5rem;
+    font-family: var(--font-secundaria);
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+.apresentacao_links_inst{ /*tag a para botoes das redes sociais*/
+    width: 50%; 
+    text-align: center;
+    border-radius: 8px; 
+    border: 2px solid var(--cor-terciaria); 
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    padding: 21.5px 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.apresentacao_links_inst:hover{ /*tag para adicionar efeito rover aos botoes das redes sociais*/
+    border-color: var(--cor-hover);
+    background-color: #272727;
+    cursor: pointer;
+}
+.apresentacao_links_subtitulo{ /*tag H2*/
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-family: var(--font-primaria);
+    font-weight: 400;
+}
+.destaque_titulo:hover{ /*tag para adicionar efeito hover ao strong do titulo*/
+    color: var(--cor-hover);
+    cursor: pointer;
+}
+.rodape{ /*rodape*/ 
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria); 
+    text-align: center;
+    font-family: var(--font-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 24px;
+}
+.lista{ /*tag da lista do curriculo*/
+    font-weight: 400;
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1200px){ /*adaptando o site para utilizar no celular e em telas menores*/
+    .apresentacao{
+        padding: 5%;
+        flex-direction: column-reverse;
+    }
+    .apresentacao_conteudo{
+        width: 100%;
+    }
+
+    .cabecalho{
+        padding: 10%;
+    }
+    .header_links{
+        justify-content: center;
+        gap: 50px;
+    }
+}
